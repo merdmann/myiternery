@@ -27,7 +27,21 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.Greeting {
+  text-align: center;
+  font-size: 160%;
+}
+
+.logo {
+  width: 80%;
+}
+
+.icon {
+  width: 64px;
 }
