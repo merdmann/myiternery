@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.css";
-import PropTypes from 'prop-types';
 import React, { Component } from "react";
 import "./App.css";
 import logo from "./MYtineraryLogo.png"; // with import
@@ -13,6 +12,7 @@ class LandingPage extends Component {
         <div>
         <Section>
               <Header />
+              <Login />
               <Burger />
         </Section>
           <div className="centered">
@@ -33,6 +33,13 @@ class Burger extends React.Component {
   }
 }
 
+class Login extends React.Component {
+  constructor( props ){
+    super(props);
+    this.state = { connected : false}
+  }
+  render() { return ( <img className="icon left" src={this.state.connected ? home: homeActive } alt=""/> );}
+}
 
 //
 // a simple fuctional component
