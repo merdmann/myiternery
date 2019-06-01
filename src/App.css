@@ -39,9 +39,29 @@
 }
 
 .logo {
-  width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .icon {
-  width: 64px;
+  width: 32px;
+}
+
+.header {
+  background-color: gray;
+  height: 30px;
+  width: 100%;
+}
+
+
+.right {
+  margin-right: 0px;
+  float: right;
+}
+
+.Section {
+  margin-bottom:100px;
+  background-color: red;
 }
