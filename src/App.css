@@ -49,12 +49,6 @@
   width: 32px;
 }
 
-.header {
-  background-color: gray;
-  height: 30px;
-  width: 100%;
-}
-
 
 .right {
   margin-right: 0px;
@@ -62,6 +56,16 @@
 }
 
 .Section {
-  margin-bottom:0px;
-  background-color: red;
+  margin-bottom:15px;
+}
+
+.Control {
+  width: 64px;
+}
+
+.Centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
