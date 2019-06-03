@@ -6,6 +6,7 @@ import home from "./home.png";
 import homeActive from "./homeActive.png";
 import burger from "./menu-button-of-three-horizontal-lines.png";
 import visit from "./circledright.png";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class LandingPage extends Component {
   render() {
@@ -15,6 +16,7 @@ class LandingPage extends Component {
           <Section>
             <Header />
             <Login />
+            <AppRouter></AppRouter>
             <Burger />
           </Section>
           <div className="centered">
@@ -27,6 +29,12 @@ class LandingPage extends Component {
         </div>
         <div className="Centered">
         <Visit />
+        <Section>
+          <Screen />
+          <Screen />
+          <Screen />
+          <Screen />
+        </Section>
         </div>
       </div>
     )
@@ -42,15 +50,21 @@ class Burger extends React.Component {
 class Visit extends React.Component {
   render() {
     return <img src={visit} className="Control centered" alt="" onClick={function () { alert("click"); }} />;
-  }
+  }   
 }
 
+class Screen extends React.Component {
+  render() {
+    return <div className = "ScreenLayout"></div>
+  }
+}
 class Login extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = { connected: false }
   }
-  render() { return (<img className="icon left" src={this.state.connected ? home : homeActive} alt="" />); }
+  render() { return (<imgLogin className="icon left" src={this.state.connected ? home : homeActive} alt="" />); }
 }
 
 //
@@ -71,3 +85,35 @@ class Section extends React.Component {
     return <div className="Section">{this.props.children}</div>;
   }
 }
+
+/**
+ * Do what is needed to register a new user
+ */
+function DoSignUP() {
+  return <h2>SignUp</h2>;
+}
+
+
+function AppRouter() {
+  return (  
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/signIn/">SignIN</Link>
+            </li>
+            <li>
+              <Link to="/signUp/">SignUP</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Route path="/signIN/" component={Login} />
+        <Route path="/signUP/" component={DoSignUP} />
+      </div>
+    </Router>
+  );
+}
+
+/* last line */

@@ -57,6 +57,7 @@
 
 .Section {
   margin-bottom:15px;
+  margin-top: 5px;
 }
 
 .Control {
@@ -68,4 +69,14 @@
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+
+.ScreenLayout {
+  border-block-color: white;
+  display: block;
+  width: 200px;
+  height: 90px;
+  background-color:  gray;
+  float: left;
 }
