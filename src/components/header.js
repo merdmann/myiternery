@@ -1,7 +1,10 @@
-mport React from "react";
+import React from "react";
 
-function Header(prop) {
-    return <div className="Header"><p>Copyright(C) 2019</p></div> 
-}
+class Header extends React.Component {
+    render() {
+      return <div className = "Header"></div>
+    }
+  }
+
 
 export default Header;

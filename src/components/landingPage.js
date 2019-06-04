@@ -2,11 +2,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import Login  from "./components/login"
-import Header from "./components/Header";
-import Burger from "./components/Burger";
-import Section from "./components/section";
-import Screen from "./components/screen"
+import Login  from "./login"
+import Header from "./header";
+import Burger from "./burger";
+import Section from "./section";
+import Screen from "./screen"
 import logo from "./MYtineraryLogo.png"
 import "./App.css";
 
