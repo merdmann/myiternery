@@ -31,11 +31,12 @@ class LandingPage extends Component {
             </p>
           </div>
         </div>
+        <p>Popular MYtinaries</p>
         <Section layout="Flexbox">
-          <Screen player="1" />
-          <Screen player="2" />
-          <Screen player="3" />
-          <Screen player="4" />
+          <Screen player="1" location="barcelona: Gaudi in a Day" />
+          <Screen player="2" location="New York: Brooklin Pizza"/>
+          <Screen player="3" location="Amsterdam Red Light Green Llght"/>
+          <Screen player="4" location="Paris Champange at the Eifel"/>
         </Section>
         <Footer />
       </div>
