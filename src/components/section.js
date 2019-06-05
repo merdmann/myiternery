@@ -1,3 +1,6 @@
+/**
+ * THis is a section.
+ */
 import React, { Component } from "react";
 
 class Section extends React.Component {
@@ -6,7 +9,7 @@ class Section extends React.Component {
     }
   
     render() {
-      return <div className="Section">{this.props.children}</div>;
+      return <div className={this.props.layout}>{this.props.children}</div>;
     }
 }
 

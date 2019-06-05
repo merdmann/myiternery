@@ -7,7 +7,9 @@ import Header from "./header";
 import Burger from "./burger";
 import Section from "./section";
 import Screen from "./screen"
+import Footer from "./footer"
 import logo from "./MYtineraryLogo.png"
+import Visit from "./visit"
 import "./App.css";
 
 class LandingPage extends Component {
@@ -15,7 +17,7 @@ class LandingPage extends Component {
     return (
       <div>
         <div>
-          <Section>
+          <Section layout="HeaderSection">
             <Header />
             <Login />
             <Burger />
@@ -25,22 +27,21 @@ class LandingPage extends Component {
             <p className="Greeting">
               Find your perfect trip, designed by insiders who know and love their
               cities.
+              <Visit />
             </p>
           </div>
         </div>
-        <div className="Centered">
-        <Section>
-          <Screen />
-          <Screen />
-          <Screen />
-          <Screen />
+        <Section layout="Flexbox">
+          <Screen player="1" />
+          <Screen player="2" />
+          <Screen player="3" />
+          <Screen player="4" />
         </Section>
-        </div>
+        <Footer />
       </div>
     )
   }
 }
-
 export default LandingPage;
 
 

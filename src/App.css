@@ -42,7 +42,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 32%;
 }
 
 .icon {
@@ -55,7 +55,7 @@
   float: right;
 }
 
-.Section {
+.HeaderLayout {
   margin-bottom:15px;
   margin-top: 5px;
 }
@@ -72,11 +72,27 @@
 }
 
 
-.ScreenLayout {
+.ScreenLayout_1, .ScreenLayout_3 {
   border-block-color: white;
   display: block;
-  width: 200px;
+  width:  90px;
   height: 90px;
-  background-color:  gray;
+  background-color:  red;
   float: left;
+}
+
+
+.ScreenLayout_2, .ScreenLayout_4 {
+  border-block-color: white;
+  display: block;
+  width:  90px;
+  height: 90px;
+  background-color:  blue;
+  float: right;
+}
+
+
+.FlexBox {
+  display: flex;
+
 }

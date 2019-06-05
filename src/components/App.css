@@ -33,6 +33,7 @@
   }
 }
 
+
 .Greeting {
   text-align: center;
   font-size: 160%;
@@ -55,7 +56,7 @@
   float: right;
 }
 
-.Section {
+.HeaderSection {
   margin-bottom:15px;
   margin-top: 5px;
 }
@@ -71,12 +72,38 @@
     width: 50%;
 }
 
+/* flex box ontainer */
+.Flexbox {
+    margin-left: 30px;
+    width: 280px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch; 
+    flex-wrap: wrap;
+}
 
-.ScreenLayout {
-  border-block-color: white;
-  display: block;
-  width: 200px;
-  height: 90px;
-  background-color:  gray;
-  float: left;
+.ScreenLayout_1 {
+     width: 150px;
+     height:180px;
+     background-color: "gray";
+     float: left;
+}
+
+.ScreenLayout_2 {
+  width: 150px;
+  height: 180px;
+  background-color: "gray";
+}
+
+.ScreenLayout_3 {
+  width: 150px;
+  height:180px;
+  background-color: "gray";
+}
+
+.ScreenLayout_4 {
+  width: 150px;
+  height: 180px;
+  background-color: "gray";
 }
