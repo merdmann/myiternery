@@ -17,7 +17,7 @@ class LandingPage extends Component {
     return (
       <div>
         <div>
-          <Section layout="HeaderLayout">
+          <Section layout="HeaderLayout     ">
             <Header />
             <Login />
             <Burger />
@@ -38,7 +38,6 @@ class LandingPage extends Component {
           <Screen player="3" location="Amsterdam Red Light Green Llght"/>
           <Screen player="4" location="Paris Champange at the Eifel"/>
         </Section>
-        <Footer />
       </div>
     )
   }

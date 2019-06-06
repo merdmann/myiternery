@@ -83,24 +83,32 @@
 .ScreenLayout_1, .ScreenLayout_3 {
   border-block-color: white;
   display: block;
-  width:  90px;
-  height: 90px;
+  width:  100px;
+  height: 100px;
   background-color:  red;
   float: left;
+  maring: 10px;
 }
 
 
 .ScreenLayout_2, .ScreenLayout_4 {
   border-block-color: white;
   display: block;
-  width:  90px;
-  height: 90px;
+  width:  100px;
+  height: 100px;
   background-color:  blue;
   float: right;
+  margin: 10px;
 }
 
+/**
+ * This is the flexox containing all sliders.
+ */
 .FlexBox {
+  width: 180px;
+  height:300px;
   display: flex;
   margin-left: 13px;
   margin-right: 13px;
+  flex-direction: column;
 }
