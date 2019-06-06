@@ -1,7 +1,7 @@
 /**
  * THis is a section.
  */
-import React, { Component } from "react";
+import React  from "react";
 
 class Section extends React.Component {
     getChildContext() {

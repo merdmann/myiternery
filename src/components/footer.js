@@ -5,7 +5,14 @@
 import React from "react";
 
 function Footer(prop) {
-    return <header><div className="wrapper"><p>MYiterneary Copyright(C) 2019 Schaby wroks</p></div></header>
+    return( <footer>
+           <p className="Greeting">Want to build your own MYtienerary </p>
+           
+           <button>Log in</button>
+           <button>Create Account</button>
+           
+          </footer> );
+
 }
 
 export default Footer;

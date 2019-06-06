@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import Login  from "./login"
-import Header from "./header";
-import Burger from "./burger";
-import Section from "./section";
-import Screen from "./screen"
-import Footer from "./footer"
+import Login  from "../components/login"
+import Header from "../components/header";
+import Burger from "../components/burger";
+import Section from "../components/section";
+import Screen from "../components/screen"
+import Footer from "../components/footer"
 import logo from "./MYtineraryLogo.png"
-import Visit from "./visit"
-import "./App.css";
+import Visit from "../components/visit"
+import "../App.css";
 
 class LandingPage extends Component {
   render() {
     return (
       <div>
         <div>
-          <Section layout="HeaderSection">
+          <Section layout="HeaderLayout">
             <Header />
             <Login />
             <Burger />
@@ -29,15 +29,12 @@ class LandingPage extends Component {
               <Visit />
             </p>
           </div>
+          <section layout="Footer">
+             <p>Want to build your own MYtinaerary</p>
+             <a href="./2/login">Login</a>
+             <a href="./2/new Account">Login</a>
+          </section>
         </div>
-        <p>Popular MYtinaries</p>
-        <Section layout="Flexbox">
-          <Screen player="1" location="barcelona: Gaudi in a Day" />
-          <Screen player="2" location="New York: Brooklin Pizza"/>
-          <Screen player="3" location="Amsterdam Red Light Green Llght"/>
-          <Screen player="4" location="Paris Champange at the Eifel"/>
-        </Section>
-        <Footer />
       </div>
     )
   }

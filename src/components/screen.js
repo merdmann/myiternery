@@ -1,8 +1,8 @@
 /**
- * This will be the sliders at the bottom of the screen.
+ * This will be the sliders at the bottom of the screen showing poular
+ * prodcts.
  */
 import React from "react";
-//import React, { Component } from 'react';
 
 class Screen extends React.Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Screen extends React.Component {
   }; //constructor
 
   render() { 
-  return (<div><span>{this.props.location}</span><img className={"ScreenLayout_"+ this.props.player} src={this.state.img[0]} alt="barcelona" /></div>);
+  return (<img className={"ScreenLayout_"+ this.props.player} src={this.state.img[0]} alt="barcelona" />);
   } // render
 }
 

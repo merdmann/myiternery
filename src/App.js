@@ -5,17 +5,21 @@
 
 import "bootstrap/dist/css/bootstrap.css";
 import React, { Component } from "react";
-import "./App.css";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
-import LandingPage from "./components/landingPage"
-//import login from "./components/login.js"
+import LandingPage_V1 from "./pages/landingPage_V1"
+import LandingPage_V2 from "./pages/landingPage_V2"
+
+
 
 class App extends Component {
  render() {
     return (  
       <BrowserRouter>
-        <Route path="/home" component={LandingPage} />
+        <switch>
+        <Route path="/1" component={LandingPage_V1} />
+        <Route path="/2" component={LandingPage_V2} />
+        </switch>
       </BrowserRouter>
     );
   }
