@@ -54,9 +54,14 @@
 }
 
 .right {
-  margin-right: 0px;
+  margin-right: 12px;
   float: right;
 }
+
+.left [
+  margin-left: 12px;
+  float: left;
+]
 
 .HeaderLayout {
   margin-bottom:15px;

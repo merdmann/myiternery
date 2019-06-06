@@ -18,7 +18,7 @@ class Screen extends React.Component {
   }; //constructor
 
   render() { 
-  return (<img className={"ScreenLayout_"+ this.props.player} src={this.state.img[0]} alt="barcelona" />);
+  return (<img className={"ScreenLayout_"+ this.props.player} src={this.state.img[1]} alt="barcelona" />);
   } // render
 }
 
