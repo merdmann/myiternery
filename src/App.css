@@ -58,10 +58,10 @@
   float: right;
 }
 
-.left [
+.left {
   margin-left: 12px;
   float: left;
-]
+}
 
 .HeaderLayout {
   margin-bottom:15px;
@@ -79,34 +79,33 @@
     width: 50%;
 }
 
-
 .ScreenLayout_1, .ScreenLayout_3 {
   border-block-color: white;
   display: block;
-  width:  100px;
-  height: 100px;
+  width:  200px;
+  height: 200px;
   background-color:  red;
   float: left;
-  maring: 10px;
+  margin-right:10px.
 }
 
 
 .ScreenLayout_2, .ScreenLayout_4 {
   border-block-color: white;
   display: block;
-  width:  100px;
-  height: 100px;
+  width:  200px;
+  height: 200px;
   background-color:  blue;
   float: right;
-  margin: 10px;
+  margin-left:10px ;
 }
 
 /**
  * This is the flexox containing all sliders.
  */
 .FlexBox {
-  width: 180px;
-  height:300px;
+  width: 200px;
+  height:400px;
   display: flex;
   margin-left: 13px;
   margin-right: 13px;

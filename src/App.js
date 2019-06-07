@@ -9,8 +9,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 
 import LandingPage_V1 from "./pages/landingPage_V1"
 import LandingPage_V2 from "./pages/landingPage_V2"
-
-
+import createAccount  from "./pages/createAccount"
 
 class App extends Component {
  render() {
@@ -19,6 +18,7 @@ class App extends Component {
         <switch>
         <Route path="/1" component={LandingPage_V1} />
         <Route path="/2" component={LandingPage_V2} />
+        <Route path="/create" component={createAccount} />"
         </switch>
       </BrowserRouter>
     );

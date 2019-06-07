@@ -11,14 +11,20 @@ class Screen extends React.Component {
     this.state = { next: 0,
                    img:[]};
 
-    this.state.img.push("https://upload.wikimedia.org/wikipedia/commons/8/8d/Barcelona_collage.JPG");
-    this.state.img.push("https://de.wikipedia.org/wiki/Barcelona#/media/File:Barcino,_de_Joan_Brossa.jpg");
-    this.state.img.push("https://de.wikipedia.org/wiki/Barcelona#/media/File:Kathedrale_von_Barcelona.jpg");
-    this.state.img.push("https://de.wikipedia.org/wiki/Barcelona#/media/File:Relleu_porta_Sant_Iu_esquerra.jpg")
+    this.state.img.push("https://cdn.pixabay.com/photo/2016/03/24/07/31/spain-1276209__340.jpg");
+    this.state.img.push("https://www.istockphohttps://cdn.pixabay.com/photo/2015/09/23/15/29/barcelona-953904__340.jpg");
+    this.state.img.push("https://cdn.pixabay.com/photo/2015/03/18/22/35/barcelona-680182__340.jpg")
   }; //constructor
 
-  render() { 
-  return (<img className={"ScreenLayout_"+ this.props.player} src={this.state.img[1]} alt="barcelona" />);
+  render() {
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+    
+    const rnd = getRandomInt( this.state.img.length ) 
+
+    console.log(rnd);
+    return (<img className={"ScreenLayout_"+ this.props.player} src={this.state.img[rnd]} alt="barcelona" />);
   } // render
 }
 
