@@ -30,10 +30,9 @@ class LandingPage extends Component {
             </p>
           </div>
           <section layout="Footer">
-             <p>Want to build your own MYtinaerary</p>
-             <a className="left" href="./2/login">Login</a>
-             <a className="right" href="./2/new-Account">Create Account</a>
+             <p className="Greeting">Want to build your own MYtinaerary</p>
           </section>
+          <Footer></Footer>
         </div>
       </div>
     )

@@ -3,14 +3,14 @@
  * @param {*} prop 
  */
 import React from "react";
+import Home from "./homeActive.png"
+
 
 function Footer(prop) {
     return( <footer>
-           <p className="Greeting">Want to build your own MYtienerary </p>
-           
-           <button>Log in</button>
-           <button>Create Account</button>
-           
+           <a className="left" href="./2/login">Login</a>
+           <img className="icon Center" src={Home} alt=""/>
+           <a className="right" href="./create">Create Account</a>
           </footer> );
 
 }
