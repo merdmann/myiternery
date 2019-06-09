@@ -70,8 +70,18 @@
     text-align: center;
 }
 
-Center {
+table {
+  width: 100%;
+  color: red;
+}
+
+.fullPage {
+  width: 100%;
+  padding: 15px;
   text-align: center;
+  vertical-align: center;
+  background-color: red;
+  color: red:
 }
 
 

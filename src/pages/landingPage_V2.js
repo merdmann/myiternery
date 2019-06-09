@@ -5,16 +5,13 @@ import Login  from "../components/login"
 import Header from "../components/header";
 import Burger from "../components/burger";
 import Section from "../components/section";
-import Screen from "../components/screen"
 import Footer from "../components/footer"
 import logo from "./MYtineraryLogo.png"
 import Visit from "../components/visit"
-import "../App.css";
 
 class LandingPage extends Component {
   render() {
     return (
-      <div>
         <div>
           <Section layout="HeaderLayout">
             <Header />
@@ -34,7 +31,6 @@ class LandingPage extends Component {
           </section>
           <Footer></Footer>
         </div>
-      </div>
     )
   }
 }

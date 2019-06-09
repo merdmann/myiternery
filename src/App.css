@@ -63,6 +63,12 @@
   float: left;
 }
 
+.Center {
+  margin: auto;
+  width: 32px;
+  padding: 10px;
+}
+
 .HeaderLayout {
   margin-bottom:15px;
   margin-top: 5px;
@@ -86,7 +92,7 @@
   height: 200px;
   background-color:  red;
   float: left;
-  margin-right:10px.
+  margin-right:10px;
 }
 
 
@@ -101,7 +107,7 @@
 }
 
 /**
- * This is the flexox containing all sliders.
+ * This is the flexbox containing all sliders.
  */
 .FlexBox {
   width: 200px;

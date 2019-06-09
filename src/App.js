@@ -3,7 +3,6 @@
  * https://www.youtube.com/watch?v=91F8reC8kvo&t=940s
  */
 
-import "bootstrap/dist/css/bootstrap.css";
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 
