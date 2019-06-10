@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Container, Row, Col } from 'react-grid-system';
+
 
 import Login  from "../components/login"
 import Header from "../components/header";
@@ -19,6 +21,13 @@ class LandingPage extends Component {
             <Burger />
           </Section>
           <div className="centered">
+          <Container>
+          <Row>
+            <Col></Col>
+            <Col> <img className="logo" src={logo} alt="" /></Col>
+            <Col></Col>
+          </Row>
+          </Container>
             <img className="logo" src={logo} alt="" />
             <p className="Greeting">
               Find your perfect trip, designed by insiders who know and love their

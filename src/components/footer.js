@@ -9,7 +9,6 @@ import activeHome from "./homeActive.png"
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-
 class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +18,7 @@ class Footer extends React.Component {
 
   render() {
     return(
+    <div className="leftFix">
     <Container>
     <Row>
       <Col><a href="./login">Login</a></Col>
@@ -33,6 +33,7 @@ class Footer extends React.Component {
       <Col></Col>
     </Row>
     </Container>
+    </div>
   );
 }
 }

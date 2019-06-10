@@ -1,5 +1,5 @@
-import home from "./home.png";
-import homeActive from "./homeActive.png";
+import home from "../icons/login.png";
+import homeActive from "../icons/loggedin.png"
 
 import React, { Component } from 'react';
 /**
