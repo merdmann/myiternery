@@ -1,22 +1,40 @@
 /**
- * Create a footer in the style of V2.
- * @param {*} prop 
+ *
+ * @param {*} prop
  */
+import { Container, Row, Col } from 'react-grid-system';
 import React from "react";
-import Home from "./homeActive.png"
+import Home from "./home.png"
+import activeHome from "./homeActive.png"
+import 'bootstrap/dist/css/bootstrap.css';
 
-function Footer(prop) {
-    return( <footer>
-           <table className="fullPage">
-           <tbody>
-           <tr className="fullPage">
-              <td className="fullPage">LOgin<a  href="./2/login">Login</a></td>
-              <td className="fullPage"><img className="icon" src={Home} alt=""/></td>
-              <td className="fullPage">Create<a href="./create">Create Account</a></td>
-          </tr>
-          </tbody>
-          </table>
-          </footer> );
+
+
+class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { connected: false };
+  };
+
+  render() {
+    return(
+    <Container>
+    <Row>
+      <Col><a href="./login">Login</a></Col>
+      <Col></Col>
+      <Col><a href="/create">New Account</a></Col>
+    </Row>
+    <Row>
+    </Row>
+    <Row>
+      <Col></Col>
+      <Col><img className="icon" src={this.state.connected?Home:activeHome} al=""></img></Col>
+      <Col></Col>
+    </Row>
+    </Container>
+  );
+}
 }
 
 export default Footer;
