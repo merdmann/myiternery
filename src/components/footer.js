@@ -1,18 +1,40 @@
 /**
- * 
- * @param {*} prop 
+ *
+ * @param {*} prop
  */
+import { Container, Row, Col } from 'react-grid-system';
 import React from "react";
-import Home from "./homeActive.png"
+import Home from "./home.png"
+import activeHome from "./homeActive.png"
+import 'bootstrap/dist/css/bootstrap.css';
 
 
-function Footer(prop) {
-    return( <footer>
-           <a className="left" href="./2/login">Login</a>
-           <img className="icon Center" src={Home} alt=""/>
-           <a className="right" href="./create">Create Account</a>
-          </footer> );
 
+class Footer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { connected: false };
+  };
+
+  render() {
+    return(
+    <Container>
+    <Row>
+      <Col><a href="./login">Login</a></Col>
+      <Col></Col>
+      <Col><a href="/create">New Account</a></Col>
+    </Row>
+    <Row>
+    </Row>
+    <Row>
+      <Col></Col>
+      <Col><img className="icon" src={this.state.connected?Home:activeHome} al=""></img></Col>
+      <Col></Col>
+    </Row>
+    </Container>
+  );
+}
 }
 
 export default Footer;
