@@ -29,7 +29,7 @@ class Footer extends React.Component {
     </Row>
     <Row>
       <Col></Col>
-      <Col><img className="icon" src={this.state.connected?Home:activeHome} al=""></img></Col>
+      <Col className="center"><div><img className="icon" src={this.state.connected?Home:activeHome} al=""></img></div></Col>
       <Col></Col>
     </Row>
     </Container>

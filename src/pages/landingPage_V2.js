@@ -24,7 +24,6 @@ class LandingPage extends Component {
           <Container>
           <Row>
             <Col></Col>
-            <Col> <img className="logo" src={logo} alt="" /></Col>
             <Col></Col>
           </Row>
           </Container>
