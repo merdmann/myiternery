@@ -3,8 +3,6 @@
  */
 import { Container, Row, Col } from 'react-grid-system';
 import React from "react";
-import Home from "./home.png"
-import activeHome from "./homeActive.png"
 
 import circle_right from "./circledright.png"
 

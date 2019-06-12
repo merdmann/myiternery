@@ -5,19 +5,23 @@
  * info as a commentary textplaced beside of field.
  */
 import React from "react";
-import { objectTypeAnnotation } from "@babel/types";
 
 class TextInput extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: "", data: new Map() };
+      this.state = {value: ""};
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
   
     handleChange(event) { 
-      this.setState({value: event.target.value});
+      const id = this.props.id
+      let o = { }
+      o[id] = event.target.value; 
+      console.log(o);
+
+      this.setState(o );
     }
   
     handleSubmit(event) {
