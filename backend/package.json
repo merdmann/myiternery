@@ -1,15 +1,19 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Backend for Mongodb accesss",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/server.js",
+    "test": "node ../test/ping.js"
   },
-  "author": "",
+  "author": "M. Erdmann",
   "license": "ISC",
   "dependencies": {
+    "bson": "^4.0.2",
+    "concurrently": "^4.1.0",
     "express": "^4.17.1",
+    "mongoose": "^5.5.15",
+    "moongoose": "0.0.5",
     "nodemon": "^1.19.1"
   }
 }
