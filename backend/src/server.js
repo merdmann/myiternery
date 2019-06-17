@@ -1,5 +1,9 @@
-var express = require('express');
-var app = express();
+const  express = require('express');
+const app = express();
+const citiesRoute = require("./routes/api/cities");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+
 const BSON = require('bson');
 const Long = BSON.Long;
 var mongoose = require('mongoose'); 
@@ -8,7 +12,8 @@ mongoose.connect("mongodb+srv://merdmann:Dieter1234@cluster0-z60nm.azure.mongodb
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log("Connected")
+  //+++++++++ Connected to db call back ++++++++++++++++++++++++
+  console.log("Connected with db")
 
 const  Users = db.collection("Users")
 
@@ -27,19 +32,22 @@ function UserExists(name, secret) {
   let instance = 0;
   Users.find(query).toArray( function( err, doc){ 
     let o = BSON.serialize(doc);
-    console.log(BSON.deserialize(o));
-    instance += o[0].secret != null ? 1 : 0;
+    let oo = BSON.deserialize(o);
+    console.log(oo[0]._id)
+    console.log(oo[0].secret)
   })
-  console.log(instance)
   return instance;
 }
 
 UserExists("Michael Erdmann")
 
-
 db.close()
-}) /* db open end */ 
- 
+}) /*+++++++++++++++++ db open end++++++++++++++++++++++++++++++ */ 
+app.use(bodyParser.json());
+app.use(cors());
+
+app.use("/api/cities", citiesRoute);
+
 app.get('/test/', function (req, res) {
   res.send('HALLO WORLD!');
 });
