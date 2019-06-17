@@ -2,13 +2,12 @@ const express = require("express");
 const router = express.Router();
 const BSON = require('bson');
 const Long = BSON.Long;
-const mongoose = require('mongoose'); 
-let   Cities = null;
+const Cities = require("../../models/cities.js")
+const db = require("../../db.js")
 
-const initialize = function (aCities) {
-    Cities = aCities;
-}
-
+/**
+ * Send all stored cities
+ */
 router.get("/1", (req, res) => {
   let result = [];
   Cities.find().toArray(function(err, docs) {
@@ -20,10 +19,5 @@ router.get("/1", (req, res) => {
   });
 })
 
-router.get("/1", (req, res) => {
-  res.send("city number 1");
-});
 
-
-module.exports = initialize;
 module.exports = router;
