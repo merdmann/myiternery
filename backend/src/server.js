@@ -1,7 +1,6 @@
 const  express = require('express');
 const app = express();
 
-const Cities = require("./models/cities.js");
 db = require("./db.js");
 
 const citiesRoute = require("./routes/api/cities");

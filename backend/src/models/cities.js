@@ -2,8 +2,16 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Cities = new Schema({
-    City    : String,
-    Country : String
+    city    : {
+      type: String,
+      required:true
+    },
+
+    country: {
+       type: String,
+       requird: true
+    }
+  
   });
 
-  module.exports = mongoose.model('Cities', Cities);
+  module.exports = mongoose.model('cities', Cities);
