@@ -8,6 +8,8 @@ import Header from "../components/header";
 import Burger from "../components/burger";
 import Section from "../components/section";                                                                                                                                                                                                  
 import Cities from "../components/cities"
+import Footer from "../components/footer"
+import TextInput from "../components/textinput"
 
 class CitiesPage extends Component {
   render() {
@@ -17,8 +19,10 @@ class CitiesPage extends Component {
             <Header />
             <Login />
             <Burger />
+          <TextInput id="City" info="City"/>
           </Section>
           <Cities />
+          <Footer></Footer>
         </div>
     )
   }

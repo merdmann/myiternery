@@ -18,7 +18,7 @@ class Footer extends React.Component {
 
   render() {
     return(
-    <div className="leftFix">
+    <div className="Footer">
     <Container>
     <Row>
       <Col><a href="./login">Login</a></Col>

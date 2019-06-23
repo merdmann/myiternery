@@ -125,3 +125,16 @@ table {
   height: 180px;
   background-color: "gray";
 }
+
+// To finished later
+.Footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.cityImage {
+  background-color: grey;
+  height: 220px;
+  width: 100%;
+}

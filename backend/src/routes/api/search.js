@@ -9,21 +9,19 @@ const Images = require("../../models/images")
 /**
  * Send all stored cities inkl the image links
  */
-router.get("/1", (req, res) => {
+router.get("/cities/", (req, res) => {
   let result = [];
-  let img = new Map();
-  
-  // load all imges into a map
-  Images.find({}).then( docs => docs.forEach( doc=> {img.set(doc.name, doc.image); console.log(doc.name)}))
+  let name = req.query.name;
 
-  Cities.find({}).then(doc => {
+  console.log(name);
+  
+  Cities.find({name: {$regex: '/^*('+ name + '*$/'}}).then(doc => {
     doc.forEach( elem => result.push({city:elem.city, image: img.get( elem.city ), country:elem.country} ))
     res.send(result);
   })
   .catch(err => {
     console.error(err)
-  let img = new Map();
-})
+  })
 
 });
 

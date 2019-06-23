@@ -71,6 +71,8 @@
 
 .HeaderLayout {
   margin-bottom:15px;
+  width: 100%;
+  height: 35px;
   margin-top: 5px;
 }
 
@@ -116,4 +118,10 @@
   margin-left: 13px;
   margin-right: 13px;
   flex-direction: column;
+}
+
+.InputField {
+  margin-top: 30px;
+  width: 100%;
+  height: 200px;
 }
