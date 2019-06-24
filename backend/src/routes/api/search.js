@@ -5,9 +5,11 @@ const mongoose = require('mongoose');
 const Cities = require("../../models/cities.js")
 const Images = require("../../models/images")
 
-
 /**
  * Send all stored cities inkl the image links
+ * https://stackoverflow.com/questions/3305561/how-to-query-mongodb-with-like
+ * 
+ * 
  */
 router.get("/cities/", (req, res) => {
   let result = [];
@@ -15,8 +17,11 @@ router.get("/cities/", (req, res) => {
 
   console.log(name);
   
-  Cities.find({name: {$regex: '/^*('+ name + '*$/'}}).then(doc => {
-    doc.forEach( elem => result.push({city:elem.city, image: img.get( elem.city ), country:elem.country} ))
+  Cities.find({name: {$regex: '/Rom/'}}).then(doc => {
+    doc.forEach( elem => { 
+      result.push({ city:elem.city, image: null,  country:elem.country}) 
+    }) ;
+
     res.send(result);
   })
   .catch(err => {
