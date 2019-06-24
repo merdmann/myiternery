@@ -14,14 +14,11 @@ const Images = require("../../models/images")
 router.get("/cities/", (req, res) => {
   let result = [];
   let name = req.query.name;
-
-  console.log(name);
   
-  Cities.find({name: {$regex: '/Rom/'}}).then(doc => {
+Cities.find({city:{$regex: "^" +name + "" }}).then(doc => {
     doc.forEach( elem => { 
       result.push({ city:elem.city, image: null,  country:elem.country}) 
     }) ;
-
     res.send(result);
   })
   .catch(err => {
