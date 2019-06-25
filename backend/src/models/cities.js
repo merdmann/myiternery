@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const Cities = new Schema({
-    city    : {
+    city_name  : {
       type: String,
       required:true
     },
@@ -10,8 +10,12 @@ const Cities = new Schema({
     country: {
        type: String,
        requird: true
-    }
+    },
   
+    img_url: {
+       type: String,
+       required: true
+    }
   });
 
   module.exports = mongoose.model('cities', Cities);

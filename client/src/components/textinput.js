@@ -1,37 +1,46 @@
 /**
  * Collect all Account information
  * https://reactjs.org/docs/forms.html
- * 
+ *
  * info as a commentary textplaced beside of field.
  */
 import React from "react";
+import Cities from "../components/cities"
 
 class TextInput extends React.Component {
     constructor(props) {
       super(props);
+      this.input = "";
+      this.test = 123;
       this.state = {value: ""};
-  
+      this.timer=null;
       this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
-    handleChange(event) { 
-      const id = this.props.id
-      let o = { }
-      o[id] = event.target.value; 
-      console.log(o);
 
-      this.setState(o );
+    handleChange(event) {
+      const id = this.props.id
+      let ch = event.target.value;
+
+      let o = { }
+      o[id] = ch;
+      console.log(o)
+
+      this.setState({value: ch});
     }
-  
-    handleSubmit(event) {
-      console.log( this.state.value )
-      event.preventDefault();
+
+    done() {
+      console.log(this.state.value);
+      Cities.forceUpdate( () => { console.log("forceUpdata callback")})
+    }
+
+    componentWillMount () {
+      console.log(this.id)
+        this.timer = setInterval(this.done,1000 );
     }
 
     render() {
       return (
-        <form onSubmit={this.handleSubmit}>
+        <form >
           <label>
             <span>{this.props.info}</span>
             <input type="text" value={this.state.value} onChange={this.handleChange} />
@@ -40,7 +49,7 @@ class TextInput extends React.Component {
       );
     }
   }
- 
+
 
 
   export default TextInput;

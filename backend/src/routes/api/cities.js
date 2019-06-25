@@ -22,8 +22,7 @@ router.get("/1", (req, res) => {
   })
   .catch(err => {
     console.error(err)
-  let img = new Map();
-})
+  })
 
 });
 

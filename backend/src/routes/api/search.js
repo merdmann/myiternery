@@ -15,9 +15,9 @@ router.get("/cities/", (req, res) => {
   let result = [];
   let name = req.query.name;
   
-Cities.find({city:{$regex: "^" +name + "" }}).then(doc => {
+Cities.find({city_name:{$regex: "^" +name + "" }}).then(doc => {
     doc.forEach( elem => { 
-      result.push({ city:elem.city, image: null,  country:elem.country}) 
+      result.push({ city:elem.city_name, country:elem.country, picture:elem.img_url}) 
     }) ;
     res.send(result);
   })
