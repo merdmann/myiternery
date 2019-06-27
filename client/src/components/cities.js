@@ -25,7 +25,8 @@ import { conditionalExpression } from "@babel/types";
 
         openIternary() {
            console.log("click")
-        }
+           </button>
+         }
 
         render() {
             return this.state.cities.map(city => <div className="cityImage center" onclick={Cities.openIternary}>

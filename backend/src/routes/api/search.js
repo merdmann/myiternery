@@ -1,9 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const BSON = require('bson');
 const mongoose = require('mongoose'); 
 const Cities = require("../../models/cities.js")
-const Images = require("../../models/images")
 
 /**
  * Send all stored cities inkl the image links
