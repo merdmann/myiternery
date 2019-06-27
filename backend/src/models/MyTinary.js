@@ -23,11 +23,12 @@ const MyTinary = new Schema({
     }
 
     cost : {
-
+      type: int;
+      required: true;
     }
 
-    duration {
-    	type: 
+    duration: {
+    	type: float;
     }
 
     country: {
@@ -36,12 +37,9 @@ const MyTinary = new Schema({
     }
 
     comments: {
-    type String,
-    required: true	
+      date: 
+      by: String;
     }
-
-
-
   
     img_url: {
        type: String,

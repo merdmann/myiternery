@@ -1,0 +1,14 @@
+.cityImage {
+    background-color: gray;
+    color: white;
+    margin-bottom: 15px;
+    height: 70px;
+    max-width:  100%;
+    max-height: 70px;
+  }
+
+  
+.center {
+    text-align: center;
+    font-size: 150%;   
+}

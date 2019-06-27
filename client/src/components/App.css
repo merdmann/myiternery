@@ -134,7 +134,7 @@ table {
 }
 
 .cityImage {
-  background-color: grey;
-  height: 220px;
-  width: 100%;
+  background-color: red;
+  height: 300px;
+  max-width:  100%;
 }

@@ -1,0 +1,4 @@
+ db.createCollection("Xtinerary",{ capped: true, size: 100000 })
+
+
+description: 

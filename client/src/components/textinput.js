@@ -29,8 +29,8 @@ class TextInput extends React.Component {
     }
 
     done() {
-      console.log(this.state.value);
-      Cities.forceUpdate( () => { console.log("forceUpdata callback")})
+      console.log(this.state);
+//      Cities.forceUpdate( () => { console.log("forceUpdata callback")})
     }
 
     componentWillMount () {

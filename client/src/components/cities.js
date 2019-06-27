@@ -3,8 +3,8 @@
  */
 import React  from "react";
 import Noimage from "../img/noimage.jpg"
-import { runInThisContext } from "vm";
-
+import styles from "./cities.css"
+import { conditionalExpression } from "@babel/types";
 /**
  * https://www.robinwieruch.de/react-fetching-data/
  */
@@ -22,11 +22,15 @@ import { runInThisContext } from "vm";
                   .then(response =>response.json())
                   .then(data => {this.setState({"cities": data}); console.log(data)});
         }
-     
+
+        openIternary() {
+           console.log("click")
+        }
+
         render() {
-            return this.state.cities.map(city =>{return <div className="cityImage">
-                <span>{city.city}</span>
-                <img src="{city.image!=null?city.picture:Noimage}" alt={city.picture}></img></div>})
+            return this.state.cities.map(city => <div className="cityImage center" onclick={Cities.openIternary}>
+            {city.city_name}</div>) 
+
         }
     } // end Cities
   
