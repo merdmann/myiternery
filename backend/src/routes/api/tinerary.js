@@ -1,22 +1,29 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require('mongoose'); 
-const tinerary = require("../../models/tinerary.js")
+const itinerary = require("../../models/tinerary.js")
 
 /**
- * return all tineraries for the given city.
+ * return all itineraries for the given city.
  */
 router.get("/search/", (req, res) => {
-  let result = [];
   const city = req.query.city;
+  let next = 0;
+
+  console.log(city)
   
-  tinerary.find().then(doc => { result.push(doc); 
+  let result = [];
+  let name = req.query.name;
+  
+  itinerary.find({city: city}).then(doc => {
+    doc.forEach( elem => { 
+      result.push( elem ) 
+    }) ;
     res.send(result);
-  })
-  .catch(err => {
+  }).catch(err => {
     console.error(err)
   })
-
-} );
+});
+  
 
 module.exports = router;

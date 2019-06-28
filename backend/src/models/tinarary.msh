@@ -1,6 +1,6 @@
-db.createCollection("tinerary",{ capped: true, size: 100000 })
+db.createCollection("itineraries",{ capped: true, size: 100000 })
 
-db.tinerary.insertOne( { description: "Gaudi in Day", city: "Barcelona", acivity: ["dining", "fun" ], duration: 12.0, liked: 0, cost: 99.95,
+db.itineraries.insertOne( { description: "Gaudi in Day", city: "Barcelona", acivity: ["dining", "fun" ], duration: 12.0, liked: 0, cost: 99.95,
                   comments: [ "Alles Kaese", "dont liked it"], 
                   subcomment: {
                       city: "Barcelona",
@@ -8,7 +8,7 @@ db.tinerary.insertOne( { description: "Gaudi in Day", city: "Barcelona", acivity
                   }
                 })
 
-db.tinerary.insertOne( { description: "Tapa Till You Droppas", city: "Barcelona", acivity: ["dining", "fun" ], duration: 4.0, liked: 0, cost: 120.0,
+db.itineraries.insertOne( { description: "Tapa Till You Droppas", city: "Barcelona", acivity: ["dining", "fun" ], duration: 4.0, liked: 0, cost: 120.0,
                   comments: [ "to less action", "to expensive"], 
                   subcomment: {
                       city: "Barcelona",
@@ -16,4 +16,3 @@ db.tinerary.insertOne( { description: "Tapa Till You Droppas", city: "Barcelona"
                   }
                 })
 
-db.X.insertOne( { })

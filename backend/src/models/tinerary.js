@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const tinerary = new Schema({
+const itinerary = new Schema({
     city  : {
       type: String,
       required:true
@@ -19,7 +19,7 @@ const tinerary = new Schema({
     cost: {
       type: Number,
     },
-
+    
     duration: {
     	type: Number,
     }, 
@@ -29,4 +29,6 @@ const tinerary = new Schema({
     } 
   });
  
-  module.exports = mongoose.model('tinerary', tinerary);
+  module.exports = mongoose.model('itinerary', itinerary );
+
+  
