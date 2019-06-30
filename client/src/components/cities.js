@@ -4,7 +4,6 @@
 import React  from "react";
 import Noimage from "../img/noimage.jpg"
 import styles from "./cities.css"
-import { conditionalExpression } from "@babel/types";
 /**
  * https://www.robinwieruch.de/react-fetching-data/
  */
@@ -23,15 +22,19 @@ import { conditionalExpression } from "@babel/types";
                   .then(data => {this.setState({"cities": data}); console.log(data)});
         }
 
-        openIternary() {
-           console.log("click")
-           </button>
+        /**
+         * Open the collection of iternararies
+         * @param {*} city 
+         */
+        handleClick(city_name) {
+          console.log("HandleClick()")
+          console.log(city_name)
          }
 
+        // https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705
         render() {
-            return this.state.cities.map(city => <div className="cityImage center" onclick={Cities.openIternary}>
-            {city.city_name}</div>) 
-
+            return this.state.cities.map(city => <div className="cityImage center" onClick={this.handleClick.bind(this,
+              city.city_name)}>{city.city_name}</div>) 
         }
     } // end Cities
   
