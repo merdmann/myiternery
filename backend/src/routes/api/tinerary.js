@@ -16,7 +16,7 @@ router.get("/search/", (req, res) => {
   let name = req.query.name;
   
   itinerary.find({city: city}).then(doc => {
-    doc.forEach( elem => { 
+    doc.forEach( elem => {
       result.push( elem ) 
     }) ;
     res.send(result);

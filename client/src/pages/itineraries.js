@@ -1,36 +1,33 @@
 import React from "react";
-import { Composition } from 'atomic-layout'
- 
-// Define layout areas as a string
-const areasMobile = `
-  thumbnail
-  header
-  footer
-`
- 
-// Responsive areas? Built-in!
-const areasTablet = `
-  thumbnail header
-  thumbnail footer
-`
+import { Component } from "react";
+import { browserHistory } from "react-router";
 
-const Itineraries = ({ title, imageUrl, actions }) => (
-  <Composition areas={areasMobile} areasMd={areasTablet} gutter={20}>
-    {/* Get React components based on provided areas */}
-    {({ Thumbnail, Header, Footer }) => (
-      <React.Fragment>
-        <Thumbnail>
-          <img src="./../icons/public-transport-subway.png" alt="" />
-        </Thumbnail>
-        <Header as="h1">h1 Hallo Welt</Header>
-        <Footer padding={10} paddingMd={20}>
-          {actions}
-        </Footer>
-      </React.Fragment>
-    )}
-  </Composition>
-)
- 
-export default Itineraries;
+/* 
+ * This comonent is expected to take the city name from http route and tto 
+ * list all iternararies for this city
+ */
+class Itinararies extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {itinararies: [] }
+  }
 
+  render() {
+    console.log(this.state.itinararies)
+    return ( this.state.itinararies && this.state.itinararies.map(i=> <div>{i}</div>) );
+  }
+
+  componentDidMount() {
+    fetch( "http://localhost:5000/api/tinerary/search?city=" + this.props.match.params.city )
+      .then(response =>response.json())
+
+      .then(data => {
+        console.log(data);
+        this.setState({itinararies: data});
+        console.log(data)});
+  }
+
+} /* end class itinararies */
+
+export default Itinararies;
 /* last line */

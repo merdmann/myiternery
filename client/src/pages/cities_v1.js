@@ -1,28 +1,17 @@
 import React, { Component } from "react";
-//import { BrowserRouter, Route, Link } from "react-router-dom";
-//import { Container, Row, Col } from 'react-grid-system';
 
-
-import Login  from "../components/login"
-import Header from "../components/header";
-import Burger from "../components/burger";
-import Section from "../components/section";                                                                                                                                                                                                  
 import Cities from "../components/cities"
-import Footer from "../components/footer"
-import TextInput from "../components/textinput"
-
+import Itinararies from "../pages/itineraries";
+import Footer from "../components/footer";
 class CitiesPage extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
         <div>
-          <Section layout="HeaderLayout">
-            <Header />
-            <Login />
-            <Burger />
-          <TextInput id="City" info="City"/>
-          </Section>
           <Cities />
-          <Footer></Footer>
         </div>
     )
   }

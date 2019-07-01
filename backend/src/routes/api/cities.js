@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Cities = require("../../models/cities.js")
 
 /**
- * Send all stored cities inkl the image links
+ * Send all stored cities
  */
 router.get("/1", (req, res) => {
   let result = [];
