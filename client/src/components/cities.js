@@ -33,13 +33,10 @@ import styles  from "./cities.css"
           console.log("HandleClick() "+city_name)
           this.setState({selected: city_name})
           console.log(this.state.selected)
-          /* Fix see:
-           * https://stackoverflow.com/questions/42701129/how-to-push-to-history-in-react-router-v4
-           */
         }
          
-
-        /* https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705 */
+        /* https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705 
+        */
         render() {
             return this.state.cities.map(city => 
             <Link to={`/4/${city.city_name}`}>
