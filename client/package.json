@@ -17,6 +17,8 @@
     "react-dom": "^16.8.6",
     "react-grid-system": "^4.4.6",
     "react-http-request": "^2.0.0",
+    "react-image-show": "^0.3.4",
+    "react-images": "^1.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "styled-components": "^4.3.2"

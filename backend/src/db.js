@@ -6,12 +6,12 @@ class Database {
     }
     
   _connect() {
-       mongoose.connect("mongodb+srv://merdmann:Dieter1234@cluster0-z60nm.azure.mongodb.net/MyTinerary?retryWrites=true&w=majority")
+        mongoose.connect("mongodb+srv://myit:Dieter1234@cluster0-fgzul.mongodb.net/MyTin?retryWrites=true&w=majority")
          .then(() => {
            console.log('Database connection successful')
          })
          .catch(err => {
-           console.error('Database connection error')
+           console.error('Database connection error ' + err )
          })
     }
   }
