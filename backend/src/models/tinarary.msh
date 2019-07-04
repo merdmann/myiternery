@@ -98,7 +98,7 @@ db.itineraries.insertOne( {
           landmarks: [ 
                   	{ name: "Get Married", url:"https://upload.wikimedia.org/wikipedia/de/thumb/e a_Grande_Arche_%282%29.JPG/330px-La_Grande_Arche_%282%29.JPG"},
                     { name: "A taste of trade", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG/450px-Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG"},
-                    { name: "Vieille Bourse", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/France-Lille-VieilleBourse-Cloitre.jpg/330px-France-Lille-VieilleBourse-Cloitre.jpg"} 
+                    { name: "Vieille Bourse", url:"https://upload.wikimedia.org/wikipedia/commons/c/c0/TrafalgarSquare2009.JPG"} 
           ],
 
           creator: {
@@ -107,5 +107,28 @@ db.itineraries.insertOne( {
           }
     })
 
+
+db.itineraries.insertOne( { 
+          description: "meet Ervin Finkel", 
+				  city: "London", 
+				  activity: [ "fun", "culture", "museum" ], 
+				  duration: 6.0, 
+				  liked: 0, 
+				  cost: 240.0,
+          		Rating: 200,
+
+          comments: [ " ", "to dificult"], 
+
+          landmarks:[
+                    { name: "Kings Road", 
+                      src:  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Kings_Road_SW3.jpg/330px-Kings_Road_SW3.jpg" 
+                    }
+          		    ],
+
+          creator: { 
+                name: "chicahombre", 
+                foto: "" 
+            }
+    } )
 
           

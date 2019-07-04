@@ -5,12 +5,12 @@ class Activty extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {views: []};
   }
 
   render() { 
+
     return (
-        <Carousel views={this.props.views}></Carousel>
+        <Carousel > </Carousel>
     );
   }
 }
