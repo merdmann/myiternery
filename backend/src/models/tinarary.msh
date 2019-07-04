@@ -2,53 +2,110 @@ db.createCollection("itineraries",{ capped: true, size: 100000 })
 
 db.itineraries.insertOne( { description: "Gaudi in Day", city: "Barcelona", activity: ["dining", "fun" ], duration: 12.0, liked: 0, cost: 99.95,
                   comments: [ "Alles Kaese", "dont liked it"], 
-                  subcomment: {
-                      city: "Barcelona",
-                      rating: 200
-                  },
+
                   creator: {
                   	  name: "GaudiLover",
                   	  foto: ""
                   },
 
-                  landmarks:[ ] 
+                  landmarks: [ 
+                    { name: "la Padera", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Casa_Mil%C3%A0%2C_general_view.jpg/450px-Casa_Mil%C3%A0%2C_general_view.jpg"},
+                    { name: "Casa Battlo", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Casa_Batllo_Overview_Barcelona_Spain_cut.jpg/330px-Casa_Batllo_Overview_Barcelona_Spain_cut.jpg"},
+                    { name: "Sagra Familigía", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Columnas_Templo_de_Augusto_Barcelona.jpg/330px-Columnas_Templo_de_Augusto_Barcelona.jpg" }
+                  ],
                 })
 
-db.itineraries.insertOne( { description: "Tapa Till You Droppas", city: "Barcelona", activity: ["dining", "fun" ], duration: 4.0, liked: 0, cost: 120.0,
-                  comments: [ "to less action", "to expensive"], 
-                  subcomment: {
-                      city: "Barcelona",
-                      rating: 200
-                  },
-
-                  landmarks: [ "la Padera","Casa Battlo", "Sagra Familigía"], 
+db.itineraries.insertOne( { 
+                  description: "Tapa till you Dropa", 
+                  city: "Barcelona", 
+                  activity: ["dining", "fun" ], 
+                  duration: 12.0, liked: 0, cost: 99.95,
+                  
+                  comments: [ "Alles Kaese", "dont liked it"], 
 
                   creator: {
-                  	  name: "chicahombre", 
-                  	  foto: "" 
-                  }
+                  	  name: "GaudiLover",
+                  	  foto: ""
+                  },
 
+                  landmarks: [ 
+                    { name: "la Padera", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Casa_Mil%C3%A0%2C_general_view.jpg/450px-Casa_Mil%C3%A0%2C_general_view.jpg"},
+                    { name: "Casa Battlo", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Casa_Batllo_Overview_Barcelona_Spain_cut.jpg/330px-Casa_Batllo_Overview_Barcelona_Spain_cut.jpg"},
+                    { name: "Sagra Familigía", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Columnas_Templo_de_Augusto_Barcelona.jpg/330px-Columnas_Templo_de_Augusto_Barcelona.jpg" }
+                    ],
                 })
 
-
-db.itineraries.insertOne( { description: "Berlin Games", 
+db.itineraries.insertOne( { 
+          description: "Berlin Games", 
 				  city: "Berlin", 
 				  activity: [ "fun", "gaming" ], 
 				  duration: 4.0, 
 				  liked: 0, 
 				  cost: 240.0,
-                  comments: [ "to less action", "to expensive"], 
+          		Rating: 200,
 
-                  landmarks: [ 
+          comments: [ "to less action", "to expensive"], 
+
+          landmarks: [ 
                   	{ name: "Berghain", url:"https://www.tagesspiegel.de/images/berghain-club-in-berlinfoto-mike-wolff/14539688/2-format43.jpg" },
                   	{ name: "RAW", url: "https://www.berlin.de/binaries/asset/image_assets/3962944/source/1468505860/624x468/"},
                     { name: "Ostbahnhof", url: "https://www.bahnhof.de/resource/image/1029298/contentarea/455/316/e2f93736cf902de9d2eabb50632131ff/Sz/Berlin-Ostbahnhof_locationBild.jpg"} ,
                     { name: "Computer Spiele Museum", url: "https://www.computerspielemuseum.de/mediabase/img/1104.jpg" }
-                 ],
+          ],
 
-                  creator: {
+          creator: {
                   	  name: "chicahombre", 
                   	  foto: "" 
-                  }
+          }
+    })
 
-                })
+
+db.itineraries.insertOne( { 
+          description: "Walking the french History", 
+				  city: "Paris", 
+				  activity: [ "fun", "culture", "museum" ], 
+				  duration: 6.0, 
+				  liked: 0, 
+				  cost: 240.0,
+          		Rating: 200,
+
+          comments: [ "to less action", "to expensive"], 
+
+          landmarks: [ 
+                  	{ name: "La Defence", url:"https://upload.wikimedia.org/wikipedia/de/thumb/e a_Grande_Arche_%282%29.JPG/330px-La_Grande_Arche_%282%29.JPG"},
+                    { name: "Verseiles", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Versailles-FacadeJardin.jpg/435px-Versailles-FacadeJardin.jpg"},
+                    { name: "louvew", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/600px-Louvre_Museum_Wikimedia_Commons.jpg"}
+          ],
+
+          creator: {
+                  	  name: "chicahombre", 
+                  	  foto: "" 
+          }
+    })
+
+
+db.itineraries.insertOne( { 
+          description: "Walking french province", 
+				  city: "Lile", 
+				  activity: [ "fun", "culture" ], 
+				  duration: 6.0, 
+				  liked: 0, 
+				  cost: 240.0,
+          		Rating: 200,
+
+          comments: [ " ", "to expensive"], 
+
+          landmarks: [ 
+                  	{ name: "Get Married", url:"https://upload.wikimedia.org/wikipedia/de/thumb/e a_Grande_Arche_%282%29.JPG/330px-La_Grande_Arche_%282%29.JPG"},
+                    { name: "A taste of trade", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG/450px-Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG"},
+                    { name: "Vieille Bourse", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/France-Lille-VieilleBourse-Cloitre.jpg/330px-France-Lille-VieilleBourse-Cloitre.jpg"} 
+          ],
+
+          creator: {
+                  	  name: "chicahombre", 
+                  	  foto: "" 
+          }
+    })
+
+
+          

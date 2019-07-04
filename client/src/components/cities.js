@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import React   from "react";
 import Noimage from "../img/noimage.jpg"
 import styles  from "./cities.css"
-//import { browserHistory } from "react-router";    
+import { directive } from "@babel/types";
 
 /**
  * See:
@@ -32,16 +32,20 @@ import styles  from "./cities.css"
         handleClick(city_name) {
           console.log("HandleClick() "+city_name)
           this.setState({selected: city_name})
-          console.log(this.state.selected)
         }
          
         /* https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705 
         */
         render() {
-            return this.state.cities.map(city => 
-            <Link to={`/4/${city.city_name}`}>
-            <div className="cityImage center" onClick={this.handleClick.bind(this,
-              city.city_name)}>{city.city_name}</div> </Link>) 
+            return this.state.cities.map(
+              city => 
+                <div className="cityImage center">
+                  <Link to={`/4/${city.city_name}`} className="cityImage">
+                    {city.city_name}
+                  </Link>
+                  <div className="cityImage center" onClick={this.handleClick.bind(this,city.city_name)}></div>
+                </div>
+            ); 
         }
     } // end Cities
   

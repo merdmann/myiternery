@@ -3,41 +3,41 @@ db.createCollection("cities",{ capped: true, size: 100000 })
 db.cities.insertOne({ 
 				  city_name : "Madrid",
 				  country: "Spain",
-				  img: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Real_Casa_de_Correos_%28Madrid%29_01.jpg/330px-Real_Casa_de_Correos_%28Madrid%29_01.jpg",
+				  img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Real_Casa_de_Correos_%28Madrid%29_01.jpg/330px-Real_Casa_de_Correos_%28Madrid%29_01.jpg",
 				  })
 
 db.cities.insertOne( { 
 				  city_name: "Berlin",
 				  country: "Germany",
-				  img: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg/555px-Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg",
+				  img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg/555px-Siegessaeule_Aussicht_10-13_img4_Tiergarten.jpg",
 				  })
 
 db.cities.insertOne( { 
 				  city_name: "Paris",
 				  country: "France",
-				  img: "https://www.google.de/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi09szPyJjjAhWjsKQKHcjVDgYQjRx6BAgBEAU&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FParis&psig=AOvVaw2MxQA7R9lI4p4fs7mmhoi0&ust=1562237038689260",
+				  img_url: "https://www.google.de/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwi09szPyJjjAhWjsKQKHcjVDgYQjRx6BAgBEAU&url=https%3A%2F%2Fde.wikipedia.org%2Fwiki%2FParis&psig=AOvVaw2MxQA7R9lI4p4fs7mmhoi0&ust=1562237038689260",
 				  })
 
 db.cities.insertOne( { 
 				  city_name: "Barcelona",
 				  country: "Spain",
-				  img: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Barcelona_collage.JPG/447px-Barcelona_collage.JPG"
+				  img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Barcelona_collage.JPG/447px-Barcelona_collage.JPG"
 				  })
 
 db.cities.insertOne({ 
 				  city_name: "London",
 				  country: "United Kingdom",
-				  img: "https://www.visitbritain.com/sites/default/files/styles/consumer_campaigns_hero_mobile/public/paragraphs_bundles/campaign_offer/images/london_0.jpg?itok=jXRIbgYf"
+				  img_url: "https://www.visitbritain.com/sites/default/files/styles/consumer_campaigns_hero_mobile/public/paragraphs_bundles/campaign_offer/images/london_0.jpg?itok=jXRIbgYf"
 				  })
 
 db.cities.insertOne({ 
 				  city_name: "Lile",
 				  country: "France",
-				  img: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG/450px-Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG"
+				  img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG/450px-Grande_Place%2C_Bourse_du_travail_et_beffroi_Lille_2.JPG"
 				  })
 
 db.cities.insertOne({ 
 				  city_name: "Amsterdam",
 				  country: "Netherlands",
-				  img: ""
+				  img_url: ""
 				  })
