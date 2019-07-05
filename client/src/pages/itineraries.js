@@ -3,46 +3,52 @@ import { Component } from "react";
 import Activity from "../components/activity"
 import styles from "../pages/itinararies.css"
 import Carousel from 'react-images';
+import Img from 'react-images';
 
 /* 
  * This comonent is expected to take the city name from http route and tto 
  * list all iternararies for this city
  */
-
 class Itinararies extends Component {
   constructor(props) {
     super(props)
     this.state = {itinararies: null, 
-      urls: null
+      urls: null 
     }
-    this.landmarks = [];
   }
-
+   /*
+   * Create the landmrk urls
+   */
   createUrls(){
     let landmarks=this.state.itinararies.map(e => e.landmarks)
     let urls = [] 
     landmarks.map(lm => {return lm.forEach(element => {
          urls.push({src :element.url})      
         })
-      })
+    })
     console.log(landmarks)
     console.log(urls)
     this.setState({urls})
   }
 
+  renderItinary(it) {
+    return( <div>
+            <img src={it.picture}></img>
+            <div>{it.creator.name}</div>
+            <h3>{it.description}</h3>
+            <span>liked {it.liked}</span>
+            <span className="infoText">Likes:{it.liked}</span>
+            <span className="infoText">Duration: {it.duration}hrs </span>
+            <span className="infoText">Cost: {it.cost}$</span><br></br>
+            <span className="infoText">{it.activity.map(t=><span className="tags">{"#"+t}</span>)}</span>
+            <div className="infoText">{it.landmarks.map( l => <span className="tags">{l.name}</span>)}</div>
+            {this.state.urls &&  <Carousel  className="infoText" views={this.state.urls}/>}
+            </div> );
+  }
+
   render() {
-    return ( this.state.itinararies && this.state.itinararies.map(i=> 
-      <div className="InfoBox">
-      <div>{i.creator.name}</div>
-      <h3>{i.description}</h3>
-      <span className="infoText">Likes:{i.liked}</span>
-      <span className="infoText">Duration {i.duration}hrs </span>
-      <span className="infoText">Cost {i.cost}$</span><br></br>
-      <span className="infoText">{i.activity.map(t=><span className="tags">{"#"+t}</span>)}</span>
-      <div className="infoText">{i.landmarks.map( l => <span className="tags">{l.name}</span>)}</div>
-      {this.state.urls &&  <Carousel  views={this.state.urls}/>}
-      )
-      </div> ));
+      console.log(this.state.itinararies);
+      return(this.state.itinararies && this.state.itinararies.map(it=>this.renderItinary(it)))
   }
 
   componentDidMount() {
@@ -54,8 +60,7 @@ class Itinararies extends Component {
         this.createUrls()
       });
   };
-
 } /* class */
 
 export default Itinararies;
-/* last line */
+/* last line */ 

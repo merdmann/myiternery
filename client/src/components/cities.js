@@ -6,6 +6,7 @@ import React   from "react";
 import Noimage from "../img/noimage.jpg"
 import styles  from "./cities.css"
 import { directive } from "@babel/types";
+import Img from 'react-images';
 
 /**
  * See:
@@ -37,12 +38,15 @@ import { directive } from "@babel/types";
         /* https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705 
         */
         render() {
+            console.log(this.state.cities);
+
             return this.state.cities.map(
               city => 
                 <div className="cityImage center">
                   <Link to={`/4/${city.city_name}`} className="cityImage">
                     {city.city_name}
                   </Link>
+                  <img src={city.picture}></img>
                   <div className="cityImage center" onClick={this.handleClick.bind(this,city.city_name)}></div>
                 </div>
             ); 
