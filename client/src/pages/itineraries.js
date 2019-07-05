@@ -12,21 +12,25 @@ import Carousel from 'react-images';
 class Itinararies extends Component {
   constructor(props) {
     super(props)
-    this.state = {itinararies: []}
+    this.state = {itinararies: null, 
+      urls: null
+    }
     this.landmarks = [];
   }
 
-  render() {
-    let landmarks=this.state.itinararies.landmarks.map(e => e.landmarks)
+  createUrls(){
+    let landmarks=this.state.itinararies.map(e => e.landmarks)
     let urls = [] 
     landmarks.map(lm => {return lm.forEach(element => {
          urls.push({src :element.url})      
-     })
-    })
+        })
+      })
     console.log(landmarks)
     console.log(urls)
+    this.setState({urls})
+  }
 
-
+  render() {
     return ( this.state.itinararies && this.state.itinararies.map(i=> 
       <div className="InfoBox">
       <div>{i.creator.name}</div>
@@ -36,7 +40,7 @@ class Itinararies extends Component {
       <span className="infoText">Cost {i.cost}$</span><br></br>
       <span className="infoText">{i.activity.map(t=><span className="tags">{"#"+t}</span>)}</span>
       <div className="infoText">{i.landmarks.map( l => <span className="tags">{l.name}</span>)}</div>
-      <Carousel views={urls}/>
+      {this.state.urls &&  <Carousel  views={this.state.urls}/>}
       )
       </div> ));
   }
@@ -47,6 +51,7 @@ class Itinararies extends Component {
       .then(data => {
         console.log(data);
         this.setState({itinararies: data })
+        this.createUrls()
       });
   };
 
