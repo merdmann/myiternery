@@ -3,7 +3,7 @@
  */
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import React   from "react";
-import Noimage from "../img/noimage.jpg"
+import home from "../icons/home.png"
 import styles  from "./cities.css"
 import { directive } from "@babel/types";
 import Img from 'react-images';
@@ -48,7 +48,7 @@ import Collapsible from 'react-collapsible';
                   <Link to={`/4/${city.city_name}`} className="cityImage">
                     {city.city_name}
                   </Link>
-                  <Collapsible trigger={city.city_name}>
+                  <Collapsible trigger={city.city_name} accordionPosition="More info">
                     <img src={city.picture}></img> 
                   </Collapsible>
               </div>
