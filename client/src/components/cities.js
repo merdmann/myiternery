@@ -8,6 +8,8 @@ import styles  from "./cities.css"
 import { directive } from "@babel/types";
 import Img from 'react-images';
 
+import Collapsible from 'react-collapsible';
+ 
 /**
  * See:
  * https://www.robinwieruch.de/react-fetching-data/
@@ -46,9 +48,10 @@ import Img from 'react-images';
                   <Link to={`/4/${city.city_name}`} className="cityImage">
                     {city.city_name}
                   </Link>
-                  <img src={city.picture}></img>
-                  <div className="cityImage center" onClick={this.handleClick.bind(this,city.city_name)}></div>
-                </div>
+                  <Collapsible trigger={city.city_name}>
+                    <img src={city.picture}></img> 
+                  </Collapsible>
+              </div>
             ); 
         }
     } // end Cities
