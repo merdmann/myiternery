@@ -48,10 +48,16 @@ import Collapsible from 'react-collapsible';
                   <Link to={`/4/${city.city_name}`} className="cityImage">
                     {city.city_name}
                   </Link>
+<<<<<<< HEAD
                   <Collapsible trigger={city.city_name} accordionPosition="More info">
                     <img src={city.picture}></img> 
                   </Collapsible>
               </div>
+=======
+                  <img src={city.picture}></img>
+                  <div className="cityImage center" onClick={this.handleClick.bind(this,city.city_name)}></div>
+                </div>
+>>>>>>> master
             ); 
         }
     } // end Cities

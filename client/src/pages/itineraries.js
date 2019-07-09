@@ -3,15 +3,12 @@ import { Component } from "react";
 import Activity from "../components/activity"
 import styles from "../pages/itinararies.css"
 import Carousel from 'react-images';
-import Img from 'react-images';
-import Collapsible from 'react-collapsible';
 
 
 /* 
  * This comonent is expected to take the city name from http route and tto 
  * list all iternararies for this city
  */
-
 class Itinararies extends Component {
   constructor(props) {
     super(props)
@@ -32,22 +29,6 @@ class Itinararies extends Component {
     console.log(landmarks)
     console.log(urls)
     this.setState({urls})
-  }
-
-  renderItinary(it) {
-    return( <div className={styles.infoBox}>
-            <div>{it.creator.name}</div>
-            <h3>{it.description}</h3>
-            <span>liked {it.liked}</span>
-            <span className={styles.infoText}>Likes:{it.liked}</span>
-            <span className={styles.infoText}>Duration: {it.duration}hrs </span>
-            <span className={styles.infoText}>Cost: {it.cost}$</span><br></br>
-            <span className={styles.infoText}>{it.activity.map(t=><span className="tags">{"#"+t}</span>)}</span>
-            <div vclassName={styles.infoText}>{it.landmarks.map( l => <span className="tags">{l.name}</span>)}</div>
-            <Collapsible trigger="view all" >
-                    {this.state.urls &&  <Carousel  className="infoText" views={this.state.urls}/>}         
-            </Collapsible>
-            </div> );
   }
 
   render() {
