@@ -9,9 +9,9 @@ class CitiesPage extends Component {
   }
 
   render() {
-    return (
+     return (
         <div>
-          <Cities />
+          <Cities Filter="" />
         </div>
     )
   }

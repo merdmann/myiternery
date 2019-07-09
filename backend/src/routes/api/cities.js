@@ -12,7 +12,7 @@ router.get("/1", (req, res) => {
   let img = new Map();
   
   Cities.find({}).then(doc => {
-    doc.forEach( elem => result.push({city:elem.city, image: img.get( elem.city ), country:elem.country} ))
+    doc.forEach( elem => result.push({city:elem.city, image:  elem.img_url, country:elem.country} ))
     res.send(result);
   })
   .catch(err => {

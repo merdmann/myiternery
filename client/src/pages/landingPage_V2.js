@@ -16,9 +16,6 @@ class LandingPage extends Component {
     return (
         <div>
           <Section layout="HeaderLayout">
-            <Header />
-            <Login />
-            <Burger />
           </Section>
           <div className="centered">
           <Container>

@@ -1,9 +1,9 @@
 import React from "react";
 import { Component } from "react";
-import Activity from "../components/activity"
-import styles from "../pages/itinararies.css"
+import styles from "./itinararies.css"
 import Carousel from 'react-images';
-
+import Collapsible from 'react-collapsible';
+ 
 
 /* 
  * This comonent is expected to take the city name from http route and tto 
@@ -16,8 +16,9 @@ class Itinararies extends Component {
       urls: null 
     }
   }
+  
    /*
-   * Create the landmrk urls
+   * Create the landmrk urls for thr caroucell.
    */
   createUrls(){
     let landmarks=this.state.itinararies.map(e => e.landmarks)
@@ -31,8 +32,24 @@ class Itinararies extends Component {
     this.setState({urls})
   }
 
+  renderItinary(it) {
+    console.log(styles.infoText)
+    return( <div className="ItinField">
+            <div>By {it.creator.name}</div>
+            <h3>{it.description}</h3>
+            <span>liked {it.liked}</span>
+            <span className="infoText">Likes:{it.liked}</span>
+            <span className="infoText">Duration: {it.duration}hrs </span>
+            <span className="infoText">Cost: {it.cost}$</span><br></br>
+            <span className="infoText">{it.activity.map(t=><span className="tags">{"#"+t}</span>)}</span>
+            <div  className="infoText">Events: {it.landmarks.map( l => <span className="tags">{l.name}</span>)}</div>
+            <Collapsible trigger="View more/View less">
+            {this.state.urls &&  <Carousel  className="infoText" views={this.state.urls}/>}
+            </Collapsible>
+            </div> );
+  }
+
   render() {
-      console.log(this.state.itinararies);
       return(this.state.itinararies && this.state.itinararies.map(it=>this.renderItinary(it)))
   }
 

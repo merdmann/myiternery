@@ -5,11 +5,10 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import React   from "react";
 import home from "../icons/home.png"
 import styles  from "./cities.css"
-import { directive } from "@babel/types";
 import Img from 'react-images';
-
 import Collapsible from 'react-collapsible';
- 
+import TextInput from "./textinput"
+import Header from "./header" 
 /**
  * See:
  * https://www.robinwieruch.de/react-fetching-data/
@@ -36,29 +35,26 @@ import Collapsible from 'react-collapsible';
           console.log("HandleClick() "+city_name)
           this.setState({selected: city_name})
         }
-         
-        /* https://hackernoon.com/passing-arguments-to-react-event-handlers-the-easy-way-3bf8e52f7705 
-        */
-        render() {
-            console.log(this.state.cities);
 
-            return this.state.cities.map(
-              city => 
-                <div className="cityImage center">
-                  <Link to={`/4/${city.city_name}`} className="cityImage">
-                    {city.city_name}
-                  </Link>
-<<<<<<< HEAD
-                  <Collapsible trigger={city.city_name} accordionPosition="More info">
-                    <img src={city.picture}></img> 
-                  </Collapsible>
+        renderCity(city) {
+          return ( <div>
+              <div className="cityImage center">
+                <Link to={`/4/${city.city_name}`} className="cityImage">
+                  {city.city_name}
+                </Link>
               </div>
-=======
-                  <img src={city.picture}></img>
-                  <div className="cityImage center" onClick={this.handleClick.bind(this,city.city_name)}></div>
-                </div>
->>>>>>> master
-            ); 
+          </div>
+          );
+        }
+         
+          render() {            
+            return (
+            <div>
+            <Header/>
+            <TextInput info="Name"/>
+            + { this.state.cities.map(city=>this.renderCity(city))} 
+            </div>
+            );
         }
     } // end Cities
   

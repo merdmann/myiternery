@@ -15,6 +15,7 @@ class TextInput extends React.Component {
       this.state = {value: ""};
       this.timer=null;
       this.handleChange = this.handleChange.bind(this);
+      this.done = this.done.bind(this);
     }
 
     handleChange(event) {
@@ -28,14 +29,19 @@ class TextInput extends React.Component {
       this.setState({value: ch});
     }
 
+    /**
+     * End of input should initiat
+     */
     done() {
-      console.log(this.state);
-//      Cities.forceUpdate( () => { console.log("forceUpdata callback")})
+      // Force a render with a simulated state change
+      this.setState({ state: this.state });
+      console.log("end of input")
     }
 
     componentWillMount () {
       console.log(this.id)
-        this.timer = setInterval(this.done,1000 );
+      this.timer = setInterval(this.done,1000 );
+
     }
 
     render() {

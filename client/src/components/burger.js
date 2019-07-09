@@ -1,12 +1,23 @@
 /**
  * Jut show the burger on the right top side.
  */
-import XX from "./menu-button-of-three-horizontal-lines.png";
+import burger from "./menu-button-of-three-horizontal-lines.png";
 import React from "react";
+
+import styled from 'styled-components';
+ 
+const Icon = styled.img`
+    margin-left: auto;
+    margin-right: auto;
+    width: 32px;
+    height: 32px
+    background-color: red;
+  `;
+
 
 class Burger extends React.Component {
       render() {
-            return <img className="icon right" src={XX} alt=""/>;
+            return <img src={burger} alt=""/>;
       }
 }
 

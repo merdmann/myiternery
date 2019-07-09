@@ -16,7 +16,7 @@
     "react-bootstrap": "^1.0.0-beta.9",
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.8.6",
-    "react-grid-system": "^4.4.6",
+    "react-grid-system": "^4.4.9",
     "react-http-request": "^2.0.0",
     "react-image-show": "^0.3.4",
     "react-images": "^1.0.0",
