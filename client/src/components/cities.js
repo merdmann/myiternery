@@ -47,7 +47,7 @@ import Header from "./header"
           );
         }
          
-          render() {            
+        render() {            
             return (
             <div>
             <Header/>
@@ -55,7 +55,7 @@ import Header from "./header"
             + { this.state.cities.map(city=>this.renderCity(city))} 
             </div>
             );
-        }
+      }
     } // end Cities
   
      export default Cities; 

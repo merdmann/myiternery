@@ -1,10 +1,8 @@
 import React from "react";
 import { Component } from "react";
-import Activity from "../components/activity"
 import styles from "../pages/itinararies.css"
 import Carousel from 'react-images';
 import Img from 'react-images';
-Diete
 /* 
  * This comonent is expected to take the city name from http route and tto 
  * list all iternararies for this city
