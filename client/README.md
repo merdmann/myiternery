@@ -66,3 +66,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+##TODO##
+the followings deffects hasve bed found durimng the code review:
+
+Saerch field for Cities
+Reaction in case the there are no iteinararies stored in the database.
