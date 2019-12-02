@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import login from "../icons/home.png"
-import burger from "../icons/menu-button-of-three-horizontal-lines.png"
+import burger from "../icons/burger.png"
  
 const Page = styled.div`
   margin-left: auto;

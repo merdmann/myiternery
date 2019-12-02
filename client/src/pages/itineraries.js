@@ -14,7 +14,7 @@ class Itinararies extends Component {
       urls: null 
     }
   }
-   /*
+  /*
    * Create the landmrk urls
    */
   createUrls(){

@@ -1,11 +1,13 @@
 /**
  * Jut show the burger on the right top side.
  */
-import burger from "./menu-button-of-three-horizontal-lines.png";
+import burger from "../icons/burger.png";
 import React from "react";
+import Popup from "reactjs-popup";
 
 import styled from 'styled-components';
- 
+import icon from "../icons/burger.png"
+
 const Icon = styled.img`
     margin-left: auto;
     margin-right: auto;
@@ -16,9 +18,16 @@ const Icon = styled.img`
 
 
 class Burger extends React.Component {
-      render() {
-            return <img src={burger} alt=""/>;
-      }
+  render() {
+    return (
+      <div>>
+      <Popup trigger={<button> Trigger</button>} position="right center">
+        <div>Popup content here !!</div>
+      </Popup>
+      <img src={icon}></img>
+      </div>
+    );
+  }
 }
 
 export default Burger;

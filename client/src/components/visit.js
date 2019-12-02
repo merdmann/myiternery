@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import { Container, Row, Col } from 'react-grid-system';
 import React from "react";
 
-import circle_right from "./circledright.png"
+import circle_right from "../icons/go.png"
 
  function Visit(prop) {
      return (

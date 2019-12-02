@@ -9,7 +9,6 @@ const Cities = require("../../models/cities.js")
  */
 router.get("/1", (req, res) => {
   let result = [];
-  let img = new Map();
   
   Cities.find({}).then(doc => {
     doc.forEach( elem => result.push({city:elem.city, image:  elem.img_url, country:elem.country} ))
