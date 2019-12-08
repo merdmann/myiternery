@@ -1,5 +1,12 @@
 .HeaderSection {
     margin-bottom:auto;
     margin-top: 5px;
-    background-color: red;
+    background-color: blue;
   }
+
+.icon {
+  max-height: 32px;
+  max-width: 32px;
+  background-color: red;
+
+}

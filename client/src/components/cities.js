@@ -38,8 +38,8 @@ import Header from "./header"
 
         renderCity(city) {
           return ( <div>
-              <div className="cityImage center">
-                <Link to={`/4/${city.city_name}`} className="cityImage">
+              <div className="cityButton center">
+                <Link to={`/4/${city.city_name}`} className="cityButton">
                   {city.city_name}
                 </Link>
               </div>
@@ -51,8 +51,8 @@ import Header from "./header"
             return (
             <div>
             <Header/>
-            <TextInput info="Name"/>
-            + { this.state.cities.map(city=>this.renderCity(city))} 
+            <TextInput info="Filter"/>
+            { this.state.cities.map(city=>this.renderCity(city))} 
             </div>
             );
       }

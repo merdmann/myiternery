@@ -11,7 +11,6 @@ class TextInput extends React.Component {
     constructor(props) {
       super(props);
       this.input = "";
-      this.test = 123;
       this.state = {value: ""};
       this.timer=null;
       this.handleChange = this.handleChange.bind(this);
@@ -30,7 +29,7 @@ class TextInput extends React.Component {
     }
 
     /**
-     * End of input should initiat
+     * End of input should initiate the fitering
      */
     done() {
       // Force a render with a simulated state change
@@ -41,7 +40,6 @@ class TextInput extends React.Component {
     componentWillMount () {
       console.log(this.id)
       this.timer = setInterval(this.done,1000 );
-
     }
 
     render() {
